@@ -1,0 +1,147 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'unpublish',
+1 verbose cli   'greetsss@0.0.2' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 silly unpublish args[0] greetsss@0.0.2
+5 silly unpublish thing Result {
+5 silly unpublish   raw: 'greetsss@0.0.2',
+5 silly unpublish   scope: null,
+5 silly unpublish   name: 'greetsss',
+5 silly unpublish   rawSpec: '0.0.2',
+5 silly unpublish   spec: '0.0.2',
+5 silly unpublish   type: 'version' }
+6 verbose getPublishConfig null
+7 silly ls normalized greetsss\0.0.2
+8 silly gentlyRm C:\Users\fengfu\AppData\Roaming\npm-cache\greetsss\0.0.2 is being purged
+9 verbose gentlyRm don't care about contents; nuking C:\Users\fengfu\AppData\Roaming\npm-cache\greetsss\0.0.2
+10 silly mapToRegistry name greetsss
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'greetsss',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   name: 'greetsss',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/greetsss
+15 verbose get GET as part of write; not caching result
+16 verbose request uri https://registry.npmjs.org/greetsss?write=true
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 20:44:17
+19 verbose request using bearer token for auth
+20 verbose request id 4c9fffd9d75c5fe8
+21 http request GET https://registry.npmjs.org/greetsss?write=true
+22 http 200 https://registry.npmjs.org/greetsss?write=true
+23 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+23 verbose headers   etag: '"87UGS70NJZIQ4WFP9O5V0S4AT"',
+23 verbose headers   'content-type': 'application/json',
+23 verbose headers   'content-encoding': 'gzip',
+23 verbose headers   'cache-control': 'max-age=0',
+23 verbose headers   'transfer-encoding': 'chunked',
+23 verbose headers   'accept-ranges': 'bytes',
+23 verbose headers   date: 'Sun, 16 Oct 2016 12:44:39 GMT',
+23 verbose headers   via: '1.1 varnish',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+23 verbose headers   'x-cache': 'MISS',
+23 verbose headers   'x-cache-hits': '0',
+23 verbose headers   'x-timer': 'S1476621878.566635,VS0,VE745',
+23 verbose headers   vary: 'Accept-Encoding' }
+24 silly get cb [ 200,
+24 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+24 silly get     etag: '"87UGS70NJZIQ4WFP9O5V0S4AT"',
+24 silly get     'content-type': 'application/json',
+24 silly get     'content-encoding': 'gzip',
+24 silly get     'cache-control': 'max-age=0',
+24 silly get     'transfer-encoding': 'chunked',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Sun, 16 Oct 2016 12:44:39 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-hkg6824-HKG',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1476621878.566635,VS0,VE745',
+24 silly get     vary: 'Accept-Encoding' } ]
+25 verbose get saving greetsss to C:\Users\fengfu\AppData\Roaming\npm-cache\registry.npmjs.org\greetsss_3Fwrite_3Dtrue\.cache.json
+26 verbose correctMkdir C:\Users\fengfu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+27 verbose unpublish removing attachments { shasum: 'fc8c052b63529b8b173609593f378d9383facf8c',
+27 verbose unpublish   tarball: 'http://registry.npmjs.org/greetsss/-/greetsss-0.0.2.tgz' }
+28 verbose request uri https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+29 verbose request sending authorization for write operation
+30 info attempt registry request try #1 at 20:44:19
+31 verbose request using bearer token for auth
+32 http request PUT https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+33 http 500 https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+34 verbose headers { 'content-type': 'application/json',
+34 verbose headers   'cache-control': 'max-age=0',
+34 verbose headers   'content-length': '80',
+34 verbose headers   'accept-ranges': 'bytes',
+34 verbose headers   date: 'Sun, 16 Oct 2016 12:44:39 GMT',
+34 verbose headers   via: '1.1 varnish',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+34 verbose headers   'x-cache': 'MISS',
+34 verbose headers   'x-cache-hits': '0',
+34 verbose headers   'x-timer': 'S1476621879.418959,VS0,VE209' }
+35 info retry will retry, error on last attempt: Error: "cannot unpublish a version that is >24 hours old" : greetsss
+36 info attempt registry request try #2 at 20:44:30
+37 verbose request using bearer token for auth
+38 http request PUT https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+39 http 500 https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+40 verbose headers { 'content-type': 'application/json',
+40 verbose headers   'cache-control': 'max-age=0',
+40 verbose headers   'content-length': '80',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   date: 'Sun, 16 Oct 2016 12:44:50 GMT',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   connection: 'keep-alive',
+40 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+40 verbose headers   'x-cache': 'MISS',
+40 verbose headers   'x-cache-hits': '0',
+40 verbose headers   'x-timer': 'S1476621889.707464,VS0,VE766' }
+41 info retry will retry, error on last attempt: Error: "cannot unpublish a version that is >24 hours old" : greetsss
+42 info attempt registry request try #3 at 20:45:30
+43 verbose request using bearer token for auth
+44 http request PUT https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+45 http 500 https://registry.npmjs.org/greetsss/-rev/8-3c4f7b04390e34d77d288bad590ccc78
+46 verbose headers { 'content-type': 'application/json',
+46 verbose headers   'cache-control': 'max-age=0',
+46 verbose headers   'content-length': '80',
+46 verbose headers   'accept-ranges': 'bytes',
+46 verbose headers   date: 'Sun, 16 Oct 2016 12:45:51 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+46 verbose headers   'x-cache': 'MISS',
+46 verbose headers   'x-cache-hits': '0',
+46 verbose headers   'x-timer': 'S1476621950.565519,VS0,VE788' }
+47 verbose request invalidating C:\Users\fengfu\AppData\Roaming\npm-cache\registry.npmjs.org\greetsss on PUT
+48 error unpublish Failed to update data
+49 verbose stack Error: "cannot unpublish a version that is >24 hours old" : greetsss
+49 verbose stack     at makeError (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+49 verbose stack     at CachingRegistryClient.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+49 verbose stack     at Request._callback (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+49 verbose stack     at Request.self.callback (D:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:200:22)
+49 verbose stack     at emitTwo (events.js:87:13)
+49 verbose stack     at Request.emit (events.js:172:7)
+49 verbose stack     at Request.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1067:10)
+49 verbose stack     at emitOne (events.js:82:20)
+49 verbose stack     at Request.emit (events.js:169:7)
+49 verbose stack     at IncomingMessage.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:988:12)
+50 verbose statusCode 500
+51 verbose pkgid greetsss
+52 verbose cwd D:\git\Resume
+53 error Windows_NT 6.1.7601
+54 error argv "D:\\Program Files\\nodejs\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "unpublish" "greetsss@0.0.2"
+55 error node v4.4.7
+56 error npm  v2.15.8
+57 error code E500
+58 error "cannot unpublish a version that is >24 hours old" : greetsss
+59 error If you need help, you may report this error at:
+59 error     <https://github.com/npm/npm/issues>
+60 verbose exit [ 1, true ]

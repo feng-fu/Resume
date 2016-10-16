@@ -16,11 +16,18 @@ a {
 .clearfix {
   *zoom: 1;
 }
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
 ul,li {
   list-style: none;
 }
 body {
-  background-color: #ccc;
+  font-size: 14px;
+  font-family: "微软雅黑",serif;
+  line-height: 1.5;
+  background-color: #f5f5f5;
 }
 header {
   background-color: #449d48;
@@ -72,7 +79,6 @@ header>.intro {
   padding: 90px 0;
 }
 header>.intro>h1 {
-  font-size: 36px;
   margin-bottom: 15px;
 }
 header>.intro>h4 {
@@ -85,6 +91,8 @@ header>.intro>p {
   width: 767px;
   margin: 0 auto;
   line-height: 1.5;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 header>.contact {
   background-color: #3d8b43;
@@ -93,6 +101,7 @@ header>.contact {
 }
 header>.contact>ul>li {
   display: inline-block;
+  *display: inline;
   margin: 0 10px;
 }
 header>.contact>ul>li>a {
@@ -101,6 +110,157 @@ header>.contact>ul>li>a {
 header>.contact>ul>li>a:hover {
   color: #fff;
   text-decoration: underline;
+}
+nav {
+  text-align: center;
+  background-color: #357a38;
+  padding: 20px 0;
+}
+nav>ul>li {
+  display: inline-block;
+  *display: inline;
+}
+nav>ul>li>a {
+  display: block;
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255,255,255,.7);
+}
+nav>ul>li>a:hover {
+  color: rgba(255,255,255,.9);
+}
+nav>ul>li>a.active {
+  color: #fff;
+}
+main>#skill .progress {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 0 auto 20px;
+  border-radius:50%;
+  border: 7px solid;
+  border-color: #ccc #ccc orange orange;
+  position: relative;
+  color: #030303;
+  font-weight: 500;
+}
+main>#skill .progress:before {
+  content:"";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius:50%;
+  border: 7px solid;
+  border-color: transparent transparent orange orange;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -7px;
+  left: -7px;
+}
+main>#skill .progress:after {
+  content:"";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius:50%;
+  border: 7px solid;
+  border-color: transparent orange orange transparent;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+}
+main>#skill .progress.html:after {
+  transform: rotate(-10deg);
+}
+main>#skill .progress.jquery:after {
+  transform: rotate(5deg);
+}
+main>#skill .progress.html5:after {
+  transform: rotate(60deg);
+}
+main>#skill .progress.js:after {
+  transform: rotate(0deg);
+}
+main>#skill .progress.webpack:after {
+  transform: rotate(60deg);
+}
+main>#skill .progress.bootstrap:after {
+  transform: rotate(30deg);
+}
+main>.layout {
+  width: 1050px;
+  padding: 45px;
+  background-color: #fff;
+  margin: 10px auto;
+  color: #494d55;
+  text-align: center;
+}
+main>.layout>ul>li {
+  float: left;
+  width: 350px;
+  box-sizing: border-box;
+  padding: 20px;
+
+}
+main #skill>.more {
+  marin: 30px 100px;
+}
+main #skill>.more>h3 {
+  margin: 20px 0 60px;
+}
+main #skill>.more>span {
+  display: inline-block;
+  padding: 6px 30px;
+  margin: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border: 1px solid #f5f5f5;
+}
+main #portfolio>ul>li img {
+  width: 100%;
+}
+main #portfolio>ul>li .list {
+  position: relative;
+  overflow: hidden;
+}
+main #portfolio>ul>li .list>a {
+  color: rgba(0,0,0,.8);
+}
+main #portfolio>ul>li .list .descri {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  top: 90px;
+  transition: all .5s;
+  z-index: 80;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+main #portfolio>ul>li .list:hover .descri {
+  top: 30px;
+}
+main #portfolio>ul>li .list>.btn-group {
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+}
+main #portfolio>ul>li .list>.btn-group>a {
+  display: block;
+  padding: 5px 10px;
+  background: green;
+  color: rgba(255,255,255,.8);
+  margin: 10px;
+  border-radius: 4px;
+}
+main #portfolio>ul>li .list>.btn-group>a:hover {
+  color: #fff;
+}
+main #portfolio>ul>li .list>.btn-group>.left {
+  float: left;
+}
+main #portfolio>ul>li .list>.btn-group>.right {
+  float: right;
 }
 #top {
   text-align: center;
@@ -121,6 +281,33 @@ header>.contact>ul>li>a:hover {
   box-shadow: 0 0 5px #ccc;
   background-color: #4caf50;
 }
+#color-picker {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-top: -20px;
+}
+#color-picker>.picker {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(0,0,0,.6);
+  color: rgba(255,255,255,.8);
+  cursor: pointer;
+}
+#color-picker>.picker:hover {
+  color: #fff;
+  background-color: rgba(0,0,0,.7);
+}
+@media screen and (max-width: 960px) {
+  main>.layout {
+    width: 630px;
+  }
+  main>.layout>ul>li {
+    width: 210px;
+  }
+}
 @media screen and (max-width: 767px) {
   header>.topbar>ul {
     display: inline-block;
@@ -135,5 +322,22 @@ header>.contact>ul>li>a:hover {
   header>.contact>ul>li {
     display: block;
     margin-top: 10px;
+  }
+  nav {
+    display: none;
+  }
+  main>.layout {
+    width: 500px;
+  }
+  main>.layout>ul>li {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+    main>.layout {
+    width: 300px;
+  }
+  main>.layout>ul>li {
+    width: 300px;
   }
 }
