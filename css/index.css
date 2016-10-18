@@ -1,3 +1,4 @@
+/*style reset*/
 html,body,div,header,main,footer,nav,ul,li,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ img {
 a {
   text-decoration: none;
 }
+/*NORMAL style*/
 .clearfix:after {
   content:"";
   display: block;
@@ -25,17 +27,21 @@ ul,li {
 }
 body {
   font-size: 14px;
-  font-family: "微软雅黑",serif;
+  font-family: "微软雅黑","Helvetica Neue",serif;
   line-height: 1.5;
   background-color: #f5f5f5;
 }
+.indent {
+  text-indent: 3em;
+}
+/*header style*/
 header {
-  background-color: #449d48;
+  transition: all .5s;
 }
 header>.topbar {
   padding: 15px 15px 120px;
   text-align: center;
-  background-color: #4caf50;
+  transition: all .5s;
 }
 header>.topbar>ul {
   float: left;
@@ -53,6 +59,7 @@ header>.topbar>ul>li>a {
   margin: 0 14px;
   border: 2px solid rgba(255,255,255,.8);
   border-radius: 50%;
+  transition: all .5s;
 }
 header>.topbar>ul>li>a:hover {
   color: #fff;
@@ -65,9 +72,9 @@ header>.topbar>.hire {
 header>.topbar>.hire>a {
   display: block;
   padding: 10px 15px;
-  background-color: #3d8b40;
   border-radius: 5px;
   color: rgba(255,255,255,.8);
+  transition: all .5s;
 }
 header>.topbar>.hire>a:hover {
   box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
@@ -76,6 +83,7 @@ header>.topbar>.hire>a:hover {
 header>.intro {
   text-align: center;
   color: #fff;
+  transition: all .5s;
   padding: 90px 0;
 }
 header>.intro>h1 {
@@ -95,8 +103,8 @@ header>.intro>p {
   padding: 0 20px;
 }
 header>.contact {
-  background-color: #3d8b43;
   text-align: center;
+  transition: all .5s;
   padding: 30px 0;
 }
 header>.contact>ul>li {
@@ -111,10 +119,11 @@ header>.contact>ul>li>a:hover {
   color: #fff;
   text-decoration: underline;
 }
+/*navbar style*/
 nav {
   text-align: center;
-  background-color: #357a38;
   padding: 20px 0;
+  transition: all .4s;
 }
 nav>ul>li {
   display: inline-block;
@@ -133,6 +142,7 @@ nav>ul>li>a:hover {
 nav>ul>li>a.active {
   color: #fff;
 }
+/*main style*/
 main>#skill .progress {
   width: 100px;
   height: 100px;
@@ -141,10 +151,10 @@ main>#skill .progress {
   margin: 0 auto 20px;
   border-radius:50%;
   border: 7px solid;
-  border-color: #ccc #ccc orange orange;
   position: relative;
   color: #030303;
   font-weight: 500;
+  transition: all .5s;
 }
 main>#skill .progress:before {
   content:"";
@@ -153,11 +163,11 @@ main>#skill .progress:before {
   height: 100px;
   border-radius:50%;
   border: 7px solid;
-  border-color: transparent transparent orange orange;
   transform: rotate(45deg);
   position: absolute;
   top: -7px;
   left: -7px;
+  transition: all .5s;
 }
 main>#skill .progress:after {
   content:"";
@@ -166,28 +176,28 @@ main>#skill .progress:after {
   height: 100px;
   border-radius:50%;
   border: 7px solid;
-  border-color: transparent orange orange transparent;
   position: absolute;
   top: -7px;
   left: -7px;
+  transition: all .5s;
 }
 main>#skill .progress.html:after {
-  transform: rotate(-10deg);
+  transform: rotate(-22deg);
 }
 main>#skill .progress.jquery:after {
-  transform: rotate(5deg);
+  transform: rotate(-15deg);
 }
 main>#skill .progress.html5:after {
-  transform: rotate(60deg);
+  transform: rotate(50deg);
 }
 main>#skill .progress.js:after {
-  transform: rotate(0deg);
+  transform: rotate(-5deg);
 }
 main>#skill .progress.webpack:after {
-  transform: rotate(60deg);
+  transform: rotate(70deg);
 }
 main>#skill .progress.bootstrap:after {
-  transform: rotate(30deg);
+  transform: rotate(45deg);
 }
 main>.layout {
   width: 1050px;
@@ -208,7 +218,7 @@ main #skill>.more {
   marin: 30px 100px;
 }
 main #skill>.more>h3 {
-  margin: 20px 0 60px;
+  margin: 20px 0;
 }
 main #skill>.more>span {
   display: inline-block;
@@ -248,10 +258,10 @@ main #portfolio>ul>li .list>.btn-group {
 main #portfolio>ul>li .list>.btn-group>a {
   display: block;
   padding: 5px 10px;
-  background: green;
   color: rgba(255,255,255,.8);
   margin: 10px;
   border-radius: 4px;
+  transition: all .5s;
 }
 main #portfolio>ul>li .list>.btn-group>a:hover {
   color: #fff;
@@ -262,30 +272,64 @@ main #portfolio>ul>li .list>.btn-group>.left {
 main #portfolio>ul>li .list>.btn-group>.right {
   float: right;
 }
+main>#info {
+  text-align: left;
+}
+main>#info>h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+main>#info>.left {
+  float: left;
+  width: 30%;
+}
+main>#info>.right {
+  float: right;
+  width: 70%;
+}
+main>#info ul>li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  width: auto;
+  padding: 10px;
+}
+main>#info ul>li>a {
+  color: rgba(0,0,0,.7);
+  font-size: 20px;
+  transition: all .3s;
+  display: block;
+}
+main>#info ul>li>a:hover {
+  transform: scale(1.1);
+}
+/*go top style*/
 #top {
   text-align: center;
   width: 30px;
   height: 30px;
   line-height: 30px;
   border-radius: 50%;
-  background-color: #3d8b40;
   color: rgba(255,255,255,.8);
   cursor: pointer;
   position: fixed;
   right: 10px;
   bottom: 10px;
+  transition: all .5s;
   display: none;
 }
 #top:hover {
   color: #fff;
   box-shadow: 0 0 5px #ccc;
-  background-color: #4caf50;
 }
+/*theme choice model*/
 #color-picker {
   position: fixed;
   top: 50%;
-  right: 0;
+  right: -144px;
+  z-index: 2000;
   margin-top: -20px;
+  transition: all .4s;
 }
 #color-picker>.picker {
   width: 40px;
@@ -295,17 +339,301 @@ main #portfolio>ul>li .list>.btn-group>.right {
   background-color: rgba(0,0,0,.6);
   color: rgba(255,255,255,.8);
   cursor: pointer;
+  float: left;
 }
 #color-picker>.picker:hover {
   color: #fff;
   background-color: rgba(0,0,0,.7);
 }
+#color-picker>.theme {
+  background-color: rgba(0,0,0,.6);
+  width: 144px;
+  float: left;
+}
+#color-picker>.theme>ul>li {
+  float: left;
+  width: 28px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#color-picker>.theme>ul>li.active {
+  border: 2px solid #fff;
+}
+#color-picker>.theme>ul>.theme-1 {
+  background-color: #4CAF50;
+}
+#color-picker>.theme>ul>.theme-2 {
+  background-color: #00BCD4;
+}
+#color-picker>.theme>ul>.theme-3 {
+  background-color: #9C27B0;
+}
+#color-picker>.theme>ul>.theme-4 {
+  background-color: #795548;
+}
+#color-picker>.theme>ul>.theme-5 {
+  background-color: #3F51B5;
+}
+#color-picker>.theme>ul>.theme-6 {
+  background-color: #C0CA33;
+}
+#color-picker>.theme>ul>.theme-7 {
+  background-color: #009688;
+}
+#color-picker>.theme>ul>.theme-8 {
+  background-color: #607D8B;
+}
+#color-picker>.theme>ul>.theme-9 {
+  background-color: #8BC34A;
+}
+
+/*-----------------------------theme color picker ---------------*/
+/*----theme-1 style----*/
+header.theme-1,header>.topbar>.hire>a.theme-1:hover,main #portfolio>ul>li .list>.btn-group>a.theme-1 {
+  background-color: #449d48;
+}
+header>.topbar.theme-1 {
+  background-color: #4caf50;
+}
+header>.topbar>.hire>a.theme-1,header>.contact.theme-1,#top.theme-1 {
+  background-color: #3d8b43;
+}
+nav.theme-1,#top.theme-1:hover {
+  background-color: #357a38;
+}
+main>#skill .progress.theme-1 {
+  border-color: #ccc #ccc #3d8b40 #3d8b40;
+}
+main>#skill .progress.theme-1:before {
+  border-color: transparent transparent #3d8b40 #3d8b40;
+}
+main>#skill .progress.theme-1:after {
+  border-color: transparent #3d8b40 #3d8b40 transparent;
+}
+main>#info ul>li>a.theme-1:hover {
+  color: #449d48;
+}
+/*----theme-2 style----*/
+header.theme-2,header>.topbar>.hire>a.theme-2:hover,main #portfolio>ul>li .list>.btn-group>a.theme-2 {
+  background-color: #00a5bb;
+}
+main>#info ul>li>a.theme-2:hover {
+  color: #00a5bb;
+}
+header>.topbar.theme-2 {
+  background-color: #00BCD4;
+}
+header>.topbar>.hire>a.theme-2,header>.contact.theme-2,#top.theme-2 {
+  background-color: #008fa1;
+}
+nav.theme-2,#top.theme-2:hover {
+  background-color: #007888;
+}
+main>#skill .progress.theme-2 {
+  border-color: #ccc #ccc #00BCD4 #00BCD4;
+}
+main>#skill .progress.theme-2:before {
+  border-color: transparent transparent #00BCD4 #00BCD4;
+}
+main>#skill .progress.theme-2:after {
+  border-color: transparent #00BCD4 #00BCD4 transparent;
+}
+/*----theme-3 style----*/
+header.theme-3,header>.topbar>.hire>a.theme-3:hover,main #portfolio>ul>li .list>.btn-group>a.theme-3 {
+  background-color: #89229b;
+}
+main>#info ul>li>a.theme-3:hover {
+  color: #89229b;
+}
+header>.topbar.theme-3 {
+  background-color: #9C27B0;
+}
+header>.topbar>.hire>a.theme-3,header>.contact.theme-3,#top.theme-3 {
+  background-color: #771e86;
+}
+nav.theme-3,#top.theme-3:hover {
+  background-color: #641971;
+}
+main>#skill .progress.theme-3 {
+  border-color: #ccc #ccc #9C27B0 #9C27B0;
+}
+main>#skill .progress.theme-3:before {
+  border-color: transparent transparent #9C27B0 #9C27B0;
+}
+main>#skill .progress.theme-3:after {
+  border-color: transparent #9C27B0 #9C27B0 transparent;
+}
+/*----theme-4 style----*/
+header.theme-4,header>.topbar>.hire>a.theme-4:hover,main #portfolio>ul>li .list>.btn-group>a.theme-4 {
+  background-color: #694a3e;
+}
+main>#info ul>li>a.theme-4:hover {
+  color: #694a3e;
+}
+header>.topbar.theme-4 {
+  background-color: #795548;
+}
+header>.topbar>.hire>a.theme-4,header>.contact.theme-4,#top.theme-4 {
+  background-color: #593f35;
+}
+nav.theme-4,#top.theme-4:hover {
+  background-color: #49332b;
+}
+main>#skill .progress.theme-4 {
+  border-color: #ccc #ccc #795548 #795548;
+}
+main>#skill .progress.theme-4:before {
+  border-color: transparent transparent #795548 #795548;
+}
+main>#skill .progress.theme-4:after {
+  border-color: transparent #795548 #795548 transparent;
+}
+/*----theme5 style----*/
+header.theme-5,header>.topbar>.hire>a.theme-5:hover,main #portfolio>ul>li .list>.btn-group>a.theme-5 {
+  background-color: #3849a2;
+}
+main>#info ul>li>a.theme-5:hover {
+  color: #3849a2;
+}
+header>.topbar.theme-5 {
+  background-color: #3F51B5;
+}
+header>.topbar>.hire>a.theme-5,header>.contact.theme-5,#top.theme-5 {
+  background-color: #32408f;
+}
+nav.theme-5,#top.theme-5:hover {
+  background-color: #2b387c;
+}
+main>#skill .progress.theme-5 {
+  border-color: #ccc #ccc #3F51B5 #3F51B5;
+}
+main>#skill .progress.theme-5:before {
+  border-color: transparent transparent #3F51B5 #3F51B5;
+}
+main>#skill .progress.theme-5:after {
+  border-color: transparent #3F51B5 #3F51B5 transparent;
+}
+/*----theme-6 style----*/
+header.theme-6,header>.topbar>.hire>a.theme-6:hover,main #portfolio>ul>li .list>.btn-group>a.theme-6 {
+  background-color: #adb62e;
+}
+main>#info ul>li>a.theme-6:hover {
+  color: #adb62e;
+}
+header>.topbar.theme-6 {
+  background-color: #C0CA33;
+}
+header>.topbar>.hire>a.theme-6,header>.contact.theme-6,#top.theme-6 {
+  background-color: #99a129;
+}
+nav.theme-6,#top.theme-6:hover {
+  background-color: #868d24;
+}
+main>#skill .progress.theme-6 {
+  border-color: #ccc #ccc #C0CA33 #C0CA33;
+}
+main>#skill .progress.theme-6:before {
+  border-color: transparent transparent #C0CA33 #C0CA33;
+}
+main>#skill .progress.theme-6:after {
+  border-color: transparent #C0CA33 #C0CA33 transparent;
+}
+/*----theme-7 style----*/
+header.theme-7,header>.topbar>.hire>a.theme-7:hover,main #portfolio>ul>li .list>.btn-group>a.theme-7 {
+  background-color: #007d71;
+}
+main>#info ul>li>a.theme-7:hover {
+  color: #007d71;
+}
+header>.topbar.theme-7 {
+  background-color: #009688;
+}
+header>.topbar>.hire>a.theme-7,header>.contact.theme-7,#top.theme-7 {
+  background-color: #00635a;
+}
+nav.theme-7,#top.theme-7:hover {
+  background-color: #004a43;
+}
+main>#skill .progress.theme-7 {
+  border-color: #ccc #ccc #009688 #009688;
+}
+main>#skill .progress.theme-7:before {
+  border-color: transparent transparent #009688 #009688;
+}
+main>#skill .progress.theme-7:after {
+  border-color: transparent #009688 #009688 transparent;
+}
+/*----theme-8 style----*/
+header.theme-8,header>.topbar>.hire>a.theme-8:hover,main #portfolio>ul>li .list>.btn-group>a.theme-8 {
+  background-color: #566f7c;
+}
+main>#info ul>li>a.theme-8:hover {
+  color: #566f7c;
+}
+header>.topbar.theme-8 {
+  background-color: #607D8B;
+}
+header>.topbar>.hire>a.theme-8,header>.contact.theme-8,#top.theme-8 {
+  background-color: #4b626d;
+}
+nav.theme-8,#top.theme-8:hover {
+  background-color: #41545e;
+}
+main>#skill .progress.theme-8 {
+  border-color: #ccc #ccc #607D8B #607D8B;
+}
+main>#skill .progress.theme-8:before {
+  border-color: transparent transparent #607D8B #607D8B;
+}
+main>#skill .progress.theme-8:after {
+  border-color: transparent #607D8B #607D8B transparent;
+}
+/*----theme-9 style----*/
+header.theme-9,header>.topbar>.hire>a.theme-9:hover,main #portfolio>ul>li .list>.btn-group>a.theme-9 {
+  background-color: #7eb73d;
+}
+main>#info ul>li>a.theme-9:hover {
+  color: #7eb73d;
+}
+header>.topbar.theme-9 {
+  background-color: #8BC34A;
+}
+header>.topbar>.hire>a.theme-9,header>.contact.theme-9,#top.theme-9 {
+  background-color: #71a436;
+}
+nav.theme-9,#top.theme-9:hover {
+  background-color: #649130;
+}
+main>#skill .progress.theme-9 {
+  border-color: #ccc #ccc #7eb73d #7eb73d;
+}
+main>#skill .progress.theme-9:before {
+  border-color: transparent transparent #7eb73d #7eb73d;
+}
+main>#skill .progress.theme-9:after {
+  border-color: transparent #7eb73d #7eb73d transparent;
+}
+/*-----------------------------background color end ---------------*/
+
+/*------------------------@media  ---------------*/
 @media screen and (max-width: 960px) {
   main>.layout {
     width: 630px;
   }
   main>.layout>ul>li {
     width: 210px;
+  }
+  main>#portfolio>ul>li>.list .descri {
+    position: static;
+    height: 250px;
+  }
+  main>#info>.left {
+    width: 40%;
+  }
+  main>#info>.right {
+    width: 60%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -323,6 +651,9 @@ main #portfolio>ul>li .list>.btn-group>.right {
     display: block;
     margin-top: 10px;
   }
+  main>#portfolio>ul>li>.list .descri {
+    height: 170px;
+  }
   nav {
     display: none;
   }
@@ -332,12 +663,44 @@ main #portfolio>ul>li .list>.btn-group>.right {
   main>.layout>ul>li {
     width: 250px;
   }
+  main>#info>.left {
+    width: 50%;
+  }
+  main>#info>.right {
+    width: 50%;
+  }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     main>.layout {
     width: 300px;
   }
   main>.layout>ul>li {
     width: 300px;
+  }
+  main>#info>.left,main>#info>.right {
+    float: none;
+    width: auto;
+  }
+}
+@media screen and (max-width: 390px) {
+  header>.topbar>ul>li>a {
+    margin: 0 5px;
+  }
+  main>.layout {
+    width: 200px;
+  }
+  main>.layout>ul>li {
+    width: 200px;
+  }
+  main>#info ul>li {
+    padding: 5px;
+  }
+}
+@media (max-width: 500px) and (max-height: 750px) {
+  header>.topbar {
+    padding-bottom: 20px;
+  }
+  header>.intro {
+    padding: 50px 0;
   }
 }
