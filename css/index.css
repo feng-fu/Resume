@@ -36,11 +36,13 @@ body {
 }
 /*header style*/
 header {
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 header>.topbar {
   padding: 15px 15px 120px;
   text-align: center;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 header>.topbar>ul {
@@ -59,6 +61,7 @@ header>.topbar>ul>li>a {
   margin: 0 14px;
   border: 2px solid rgba(255,255,255,.8);
   border-radius: 50%;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 header>.topbar>ul>li>a:hover {
@@ -74,6 +77,7 @@ header>.topbar>.hire>a {
   padding: 10px 15px;
   border-radius: 5px;
   color: rgba(255,255,255,.8);
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 header>.topbar>.hire>a:hover {
@@ -83,6 +87,7 @@ header>.topbar>.hire>a:hover {
 header>.intro {
   text-align: center;
   color: #fff;
+  -webkit-transition: all .5s;
   transition: all .5s;
   padding: 90px 0;
 }
@@ -104,6 +109,7 @@ header>.intro>p {
 }
 header>.contact {
   text-align: center;
+  -webkit-transition: all .5s;
   transition: all .5s;
   padding: 30px 0;
 }
@@ -123,6 +129,7 @@ header>.contact>ul>li>a:hover {
 nav {
   text-align: center;
   padding: 20px 0;
+  -webkit-transition: all .4s;
   transition: all .4s;
 }
 nav>ul>li {
@@ -154,6 +161,7 @@ main>#skill .progress {
   position: relative;
   color: #030303;
   font-weight: 500;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 main>#skill .progress:before {
@@ -163,10 +171,12 @@ main>#skill .progress:before {
   height: 100px;
   border-radius:50%;
   border: 7px solid;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   position: absolute;
   top: -7px;
   left: -7px;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 main>#skill .progress:after {
@@ -179,25 +189,32 @@ main>#skill .progress:after {
   position: absolute;
   top: -7px;
   left: -7px;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 main>#skill .progress.html:after {
-  transform: rotate(-22deg);
+  -webkit-transform: rotate(-22deg);
+          transform: rotate(-22deg);
 }
 main>#skill .progress.jquery:after {
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
 }
 main>#skill .progress.html5:after {
-  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
 }
 main>#skill .progress.js:after {
-  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 main>#skill .progress.webpack:after {
-  transform: rotate(70deg);
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
 }
 main>#skill .progress.bootstrap:after {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 main>.layout {
   width: 1050px;
@@ -242,6 +259,7 @@ main #portfolio>ul>li .list .descri {
   background-color: #fff;
   width: 100%;
   top: 90px;
+  -webkit-transition: all .5s;
   transition: all .5s;
   z-index: 80;
   box-sizing: border-box;
@@ -261,6 +279,7 @@ main #portfolio>ul>li .list>.btn-group>a {
   color: rgba(255,255,255,.8);
   margin: 10px;
   border-radius: 4px;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 main #portfolio>ul>li .list>.btn-group>a:hover {
@@ -297,11 +316,13 @@ main>#info ul>li {
 main>#info ul>li>a {
   color: rgba(0,0,0,.7);
   font-size: 20px;
+  -webkit-transition: all .3s;
   transition: all .3s;
   display: block;
 }
 main>#info ul>li>a:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*go top style*/
 #top {
@@ -315,6 +336,7 @@ main>#info ul>li>a:hover {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  -webkit-transition: all .5s;
   transition: all .5s;
   display: none;
 }
@@ -329,6 +351,7 @@ main>#info ul>li>a:hover {
   right: -144px;
   z-index: 2000;
   margin-top: -20px;
+  -webkit-transition: all .4s;
   transition: all .4s;
 }
 #color-picker>.picker {
