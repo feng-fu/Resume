@@ -192,6 +192,12 @@ main>#skill .progress:after {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
+main>#skill a {
+  color: #03A9F4;
+}
+main>#skill a:hover {
+  color: green;
+}
 main>#skill .progress.html:after {
   -webkit-transform: rotate(-22deg);
           transform: rotate(-22deg);
@@ -256,7 +262,7 @@ main #portfolio>ul>li .list>a {
 }
 main #portfolio>ul>li .list .descri {
   position: absolute;
-  background-color: #fff;
+  background-color: rgba(255,255,255,.9);
   width: 100%;
   top: 90px;
   -webkit-transition: all .5s;
@@ -675,7 +681,8 @@ main>#skill .progress.theme-9:after {
     margin-top: 10px;
   }
   main>#portfolio>ul>li>.list .descri {
-    height: 170px;
+    height: 200px;
+    background-color: #fff;
   }
   nav {
     display: none;
