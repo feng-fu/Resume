@@ -734,3 +734,16 @@ main>#skill .progress.theme-9:after {
     padding: 50px 0;
   }
 }
+@media print {
+  #color-picker {
+    display: none;
+  }
+  main>#portfolio>ul>li>.list .descri {
+    position: static;
+    height: 150px;
+
+  }
+  nav {
+    display: none;
+  }
+}
