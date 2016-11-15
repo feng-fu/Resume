@@ -91,6 +91,10 @@ header>.intro {
   transition: all .5s;
   padding: 90px 0;
 }
+header>.intro p {
+  text-align: left;
+  margin-bottom: 10px;
+}
 header>.intro>h1 {
   margin-bottom: 15px;
 }
@@ -249,6 +253,30 @@ main #skill>.more>span {
   margin: 10px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   border: 1px solid #f5f5f5;
+}
+main>#experience>.tree {
+  margin-top: 50px;
+  border-left: 5px solid #8bc34a;
+  text-align: left;
+}
+main #experience .tree .experience {
+  position: relative;
+  padding-left: 20px;
+}
+main #experience .tree .experience:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid #009688;
+  background-color: #fff;
+  z-index: 1234;
+  position: absolute;
+  top: 0px;
+  left: -10px;
+
 }
 main #portfolio>ul>li img {
   width: 100%;
@@ -647,6 +675,12 @@ main>#skill .progress.theme-9:after {
 /*-----------------------------background color end ---------------*/
 
 /*------------------------@media  ---------------*/
+@media screen and (min-width: 767px) {
+  main #experience .tree {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
 @media screen and (max-width: 960px) {
   main>.layout {
     width: 630px;
